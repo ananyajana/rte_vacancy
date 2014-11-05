@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  school_id: 1
+  class_no: 1
+  gen_seats: 1
+  obc_seats: 1
+  sc_seats: 1
+  st_seats: 1
+  other_seats: 1
+
+two:
+  school_id: 1
+  class_no: 1
+  gen_seats: 1
+  obc_seats: 1
+  sc_seats: 1
+  st_seats: 1
+  other_seats: 1

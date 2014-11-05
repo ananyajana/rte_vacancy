@@ -1,0 +1,35 @@
+<h1>Listing classtables</h1>
+
+<table>
+  <tr>
+    <th>School</th>
+    <th>Class no</th>
+    <th>Gen seats</th>
+    <th>Obc seats</th>
+    <th>Sc seats</th>
+    <th>St seats</th>
+    <th>Other seats</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @classtables.each do |classtable| %>
+  <tr>
+    <td><%= classtable.school_id %></td>
+    <td><%= classtable.class_no %></td>
+    <td><%= classtable.gen_seats %></td>
+    <td><%= classtable.obc_seats %></td>
+    <td><%= classtable.sc_seats %></td>
+    <td><%= classtable.st_seats %></td>
+    <td><%= classtable.other_seats %></td>
+    <td><%= link_to 'Show', classtable %></td>
+    <td><%= link_to 'Edit', edit_classtable_path(classtable) %></td>
+    <td><%= link_to 'Destroy', classtable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classtable', new_classtable_path %>

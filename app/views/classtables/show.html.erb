@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>School:</b>
+  <%= @classtable.school_id %>
+</p>
+
+<p>
+  <b>Class no:</b>
+  <%= @classtable.class_no %>
+</p>
+
+<p>
+  <b>Gen seats:</b>
+  <%= @classtable.gen_seats %>
+</p>
+
+<p>
+  <b>Obc seats:</b>
+  <%= @classtable.obc_seats %>
+</p>
+
+<p>
+  <b>Sc seats:</b>
+  <%= @classtable.sc_seats %>
+</p>
+
+<p>
+  <b>St seats:</b>
+  <%= @classtable.st_seats %>
+</p>
+
+<p>
+  <b>Other seats:</b>
+  <%= @classtable.other_seats %>
+</p>
+
+
+<%= link_to 'Edit', edit_classtable_path(@classtable) %> |
+<%= link_to 'Back', classtables_path %>

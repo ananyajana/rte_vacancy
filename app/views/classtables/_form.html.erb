@@ -1,0 +1,45 @@
+<%= form_for(@classtable) do |f| %>
+  <% if @classtable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classtable.errors.count, "error") %> prohibited this classtable from being saved:</h2>
+
+      <ul>
+      <% @classtable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :school_id %><br />
+    <%= f.number_field :school_id %>
+  </div>
+  <div class="field">
+    <%= f.label :class_no %><br />
+    <%= f.number_field :class_no %>
+  </div>
+  <div class="field">
+    <%= f.label :gen_seats %><br />
+    <%= f.number_field :gen_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :obc_seats %><br />
+    <%= f.number_field :obc_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :sc_seats %><br />
+    <%= f.number_field :sc_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :st_seats %><br />
+    <%= f.number_field :st_seats %>
+  </div>
+  <div class="field">
+    <%= f.label :other_seats %><br />
+    <%= f.number_field :other_seats %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
