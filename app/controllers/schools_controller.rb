@@ -2,7 +2,7 @@ class SchoolsController < ApplicationController
   # GET /schools
   # GET /schools.json
   def index
-    @schools = School.all
+    @schools = School.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
