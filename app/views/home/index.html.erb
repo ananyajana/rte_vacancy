@@ -1,7 +1,7 @@
 <p>Home</p>
 <%= form_tag "/schools", :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], :placeholder => "School Name/Location"%>
     <%= submit_tag "Search", :school_name => nil %>
   </p>
 <% end %>

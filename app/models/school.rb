@@ -4,7 +4,7 @@ class School < ActiveRecord::Base
 
 def self.search(search)
   if search
-    find(:all, :conditions => ['school_name LIKE ?', "%#{search}%"])
+    find(:all, :conditions => ['school_name LIKE ? OR state LIKE ? OR district LIKE ? OR address LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
   else
 	find(:all)
   end
