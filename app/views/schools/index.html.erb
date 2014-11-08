@@ -1,7 +1,7 @@
 <h1>Listing schools</h1>
 
 <table border="1">
-  <tr>
+  <tr border="1">
     <th>User</th>
     <th>Reg</th>
     <th>School name</th>
@@ -21,7 +21,7 @@
   </tr>
 
 <% @schools.each do |school| %>
-  <tr>
+  <tr border="1">
     <td><%= school.user_id %></td>
     <td><%= school.reg_id %></td>
     <td><%= school.school_name %></td>
@@ -36,12 +36,16 @@
     <td><%= school.latitude %></td>
     <td><%= school.longitude %></td>
     <td><%= link_to 'Show', school %></td>
-    <td><%= link_to 'Edit', edit_school_path(school) %></td>
-    <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if current_user %>
+	    <td><%= link_to 'Edit', edit_school_path(school) %></td>
+	    <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New School', new_school_path %>
+<% if current_user %>
+	<%= link_to 'New School', new_school_path %>
+<% end %>

@@ -24,12 +24,14 @@
     <td><%= classtable.st_seats %></td>
     <td><%= classtable.other_seats %></td>
     <td><%= link_to 'Show', classtable %></td>
-    <td><%= link_to 'Edit', edit_classtable_path(classtable) %></td>
-    <td><%= link_to 'Destroy', classtable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+    <% if current_user %>
+	    <td><%= link_to 'Edit', edit_classtable_path(classtable) %></td>
+	<td><%= link_to 'Destroy', classtable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% end %>
 </table>
 
 <br />
 
+<% if current_user %>
 <%= link_to 'New Classtable', new_classtable_path %>
+<% end %>
