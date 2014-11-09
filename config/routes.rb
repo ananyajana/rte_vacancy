@@ -1,5 +1,5 @@
 BasicAuth::Application.routes.draw do
-#  resources :classtables
+  resources :classtables
 
 
   resources :schools
