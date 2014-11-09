@@ -2,7 +2,7 @@
 
 <table border="1">
   <tr border="1">
-    <th>User</th>
+    <!--<th>User</th>-->
     <th>Reg</th>
     <th>School name</th>
     <th>Address</th>
@@ -13,16 +13,18 @@
     <th>Phone2</th>
     <th>Email</th>
     <th>Fax</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
+    <!--<th>Latitude</th>
+    #<th>Longitude</th>-->
     <th></th>
-    <th></th>
-    <th></th>
+    <% if current_user %>
+	    <th></th>
+	    <th></th>
+    <% end %>
   </tr>
 
 <% @schools.each do |school| %>
   <tr border="1">
-    <td><%= school.user_id %></td>
+    <!--<td><%= school.user_id %></td>-->
     <td><%= school.reg_id %></td>
     <td><%= school.school_name %></td>
     <td><%= school.address %></td>
@@ -33,9 +35,9 @@
     <td><%= school.phone2 %></td>
     <td><%= school.email_id %></td>
     <td><%= school.fax %></td>
-    <td><%= school.latitude %></td>
-    <td><%= school.longitude %></td>
-    <td><%= link_to 'Show', school %></td>
+    <!--<td><%= school.latitude %></td>
+    #<td><%= school.longitude %></td>-->
+    <td><%= link_to 'Show RTE info', school %></td>
     <% if current_user %>
 	    <td><%= link_to 'Edit', edit_school_path(school) %></td>
 	    <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
