@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <b>User:</b>
   <%= @school.user_id %>
-</p>
+</p>-->
 
 <p>
   <b>Reg:</b>
@@ -55,7 +55,7 @@
   <%= @school.fax %>
 </p>
 
-<p>
+<!--<p>
   <b>Latitude:</b>
   <%= @school.latitude %>
 </p>
@@ -63,8 +63,9 @@
 <p>
   <b>Longitude:</b>
   <%= @school.longitude %>
-</p>
+</p>-->
 
-
+<% if current_user %>
 <%= link_to 'Edit', edit_school_path(@school) %> |
+<% end %>
 <%= link_to 'Back', schools_path %>
