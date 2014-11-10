@@ -16,5 +16,5 @@ def self.search(search)
   end
 end
  has_many :classtables 
- belongs_to :users
+ belongs_to :user
   end

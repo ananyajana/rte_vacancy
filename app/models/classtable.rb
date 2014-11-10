@@ -5,5 +5,5 @@ class Classtable < ActiveRecord::Base
   validates_format_of :obc_seats, :with => /^\d*$/,:message => "can contain only numbers. Please enter 0 if empty. "
   validates_format_of :st_seats, :with => /^\d*$/,:message => "can contain only numbers. Please enter 0 if empty. "
   validates_format_of :other_seats, :with => /^\d*$/,:message => "can contain only numbers. Please enter 0 if empty. "
-  belongs_to :schools
+  belongs_to :school
 end
