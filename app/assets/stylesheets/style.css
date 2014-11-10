@@ -42,12 +42,12 @@ body{
 .total{
 	border-radius: 25px 0 0 0;
 	padding:0 3%;
-	background: url(../images/gradient.png) 0 bottom repeat-x;
+	background: url(/assets/gradient.png) 0 bottom repeat-x;
 }
 .header-bg{
 	background:#FA8D03;
 }
-.logo h1 a{
+.logo h1 {
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size:4em;
 	color:#FA8D03;
@@ -141,7 +141,7 @@ body{
 	border: 1px solid #F1E1AD;
 }
 .search input[type="submit"] {
-	background:#FFA30C url('../images/search.png') no-repeat 11px 13px;
+	background:#FFA30C url('/assets/search.png') no-repeat 11px 13px;
 	padding: 10px 20px;
 	border: none;
 	cursor: pointer;
@@ -154,7 +154,7 @@ body{
 	-o-border-radius: 0px 20px 20px 0px;
 }
 .search input[type="submit"]:hover {
-	background:#333 url('../images/search.png') no-repeat 11px 13px;
+	background:#333 url('/assets/search.png') no-repeat 11px 13px;
 }
 .banner-box{
 	background:#FDF4E8;
@@ -163,7 +163,7 @@ body{
 	padding:3%;
 }
 .main-top{
-	background: url(../images/1.png)  repeat-x;
+	background: url(/assets/1.png)  repeat-x;
 }
 /*  GRID OF THREE   ============================================================================= */
 .col_1_of_3{
@@ -368,7 +368,7 @@ p.title-desc{
 	margin-bottom:10px;
 }
 .content-bottom{
-	background: url(../images/2.png) repeat-x;
+	background: url(/assets/2.png) repeat-x;
 	padding: 3%;
 	margin-top: -5px;
 }
@@ -384,7 +384,7 @@ ul.dishes_list li a {
 	font-size:13px;
 	display: block;
 	padding: 5px 0 5px 20px;
-	background: url(../images/marker.png) no-repeat 0;
+	background: url(/assets/marker.png) no-repeat 0;
 }
 ul.dishes_list li a:hover {
 	color: #FA8D03;
@@ -550,7 +550,7 @@ p.link1 {
 	line-height: 1.6em;
 }
 .link {
-	background: url(../images/arrow.gif) no-repeat 100% 8px;
+	background: url(/assets/arrow.gif) no-repeat 100% 8px;
 	display: inline-block;
 	padding: 0 13px 0 0;
 	line-height: 19px;
@@ -632,7 +632,7 @@ p.link1 {
 	padding:7px 20px;
 	color:#FFF;
 	cursor:pointer;
-	background:#FA8D03 url(../images/large-button-overlay.png);
+	background:#FA8D03 url(/assets/large-button-overlay.png);
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
@@ -646,6 +646,26 @@ p.link1 {
 	background-color:#333;
 }
 .contact-form input[type="submit"]:active{
+	background-color:#333;  
+}
+.contact-form input[type="reset"]{
+	padding:7px 20px;
+	color:#FFF;
+	cursor:pointer;
+	background:#FA8D03 url(/assets/large-button-overlay.png);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
+	-webkit-border-radius: 5px;
+    border-radius:2px;
+    font-family:Arial, Helvetica, sans-serif;
+    position:relative;
+    right:0;
+}
+.contact-form input[type="reset"]:hover{
+	background-color:#333;
+}
+.contact-form input[type="reset"]:active{
 	background-color:#333;  
 }
 .company_address p{
@@ -788,12 +808,12 @@ p.link1 {
 		width: 94%;
 	}
 	.main-top {
-		background: url(../images/1.png) repeat-x;
+		background: url(/assets/1.png) repeat-x;
 	}
 	.content-bottom {
-		background: url(../images/1024bottom.png) repeat-x;
+		background: url(/assets/1024bottom.png) repeat-x;
 	}
-	.logo h1 a {
+	.logo h1  {
 		font-size: 3.5em;
 	}
 }
@@ -819,7 +839,7 @@ p.link1 {
 	.contact-form input[type="text"], .contact-form textarea {
 		width: 94%;
 	}
-	.logo h1 a {
+	.logo h1  {
 		font-size: 3em;
 	}
 	.search {
@@ -832,10 +852,10 @@ p.link1 {
 		font-size: 1.1em;
 	}
 	.main-top {
-		background: url(../images/800.png) repeat-x;
+		background: url(/assets/800.png) repeat-x;
 	}
 	.content-bottom {
-		background: url(../images/800bottom.png) repeat-x;
+		background: url(/assets/800bottom.png) repeat-x;
 	}
 }
 @media (max-width:640px){
@@ -861,7 +881,7 @@ p.link1 {
 	.contact-form input[type="text"], .contact-form textarea {
 		width: 94%;
 	}
-	.logo h1 a {
+	.logo h1  {
 		font-size:2.5em;
 	}
 	.search {
@@ -874,10 +894,10 @@ p.link1 {
 		font-size: 1.1em;
 	}
 	.main-top {
-		background: url(../images/640.png) repeat-x;
+		background: url(/assets/640.png) repeat-x;
 	}
 	.content-bottom {
-		background: url(../images/640bottom.png) repeat-x;
+		background: url(/assets/640bottom.png) repeat-x;
 	}
 	.menu li a {
 		padding: 10px 9px;
@@ -888,7 +908,7 @@ p.link1 {
 	}
 	.search input[type="submit"] {
 		padding: 8px 20px;
-		background: #FFA30C url('../images/search.png') no-repeat 12px 11px;
+		background: #FFA30C url('/assets/search.png') no-repeat 12px 11px;
 	}
 	.grid_1_of_3 {
 		width:100%;
@@ -920,7 +940,7 @@ p.link1 {
 	.contact-form input[type="text"], .contact-form textarea {
 		width: 94%;
 	}
-	.logo h1 a {
+	.logo h1  {
 		font-size:2.5em;
 	}
 	.search {
@@ -934,10 +954,10 @@ p.link1 {
 		font-size: 1.1em;
 	}
 	.main-top {
-		background: url(../images/640.png) repeat-x;
+		background: url(/assets/640.png) repeat-x;
 	}
 	.content-bottom {
-		background: url(../images/640bottom.png) repeat-x;
+		background: url(/assets/640bottom.png) repeat-x;
 	}
 	.menu li a {
 		padding: 10px 9px;
@@ -948,7 +968,7 @@ p.link1 {
 	}
 	.search input[type="submit"] {
 		padding: 8px 20px;
-		background: #FFA30C url('../images/search.png') no-repeat 12px 11px;
+		background: #FFA30C url('/assets/search.png') no-repeat 12px 11px;
 	}
 	.grid_1_of_3 {
 		width:100%;
@@ -995,7 +1015,7 @@ p.link1 {
 	.contact-form input[type="text"], .contact-form textarea {
 		width: 94%;
 	}
-	.logo h1 a {
+	.logo h1 {
 		font-size:2.5em;
 	}
 	.search {
@@ -1009,10 +1029,10 @@ p.link1 {
 		font-size: 1.1em;
 	}
 	.main-top {
-		background: url(../images/640.png) repeat-x;
+		background: url(/assets/640.png) repeat-x;
 	}
 	.content-bottom {
-		background: url(../images/640bottom.png) repeat-x;
+		background: url(/assets/640bottom.png) repeat-x;
 	}
 	.menu li a {
 		padding: 10px 9px;
@@ -1023,7 +1043,7 @@ p.link1 {
 	}
 	.search input[type="submit"] {
 		padding: 8px 20px;
-		background: #FFA30C url('../images/search.png') no-repeat 12px 11px;
+		background: #FFA30C url('/assets/search.png') no-repeat 12px 11px;
 	}
 	.grid_1_of_3 {
 		width:100%;
