@@ -16,7 +16,7 @@
     <% end %>
   </tr>
 
-<% @classtables.each do |classtable| %>
+<% @classtables.to_a.each do |classtable| %>
   <tr>
     <td><%= classtable.school_id %></td>
     <td><%= classtable.class_no %></td>

@@ -45,6 +45,7 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(params[:school])
     @school.user_id=current_user.id
+    #@school.user_id=12
     respond_to do |format|
       if @school.save
         format.html { redirect_to @school, notice: 'School was successfully created.' }

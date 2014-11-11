@@ -1,8 +1,6 @@
 BasicAuth::Application.routes.draw do
   resources :classtables
-
-
-  resources :schools
+  resources :schools, :except => [:show]
   #get 'sch', to: 'schools#new'
   root :to=>"home#index"
   get "signed_out" => "authentication#signed_out"
@@ -25,6 +23,10 @@ BasicAuth::Application.routes.draw do
 
   get "admin_users" => "admin#users"
   delete "user/:id" => "admin#delete_user", :as => "user"
+
+  get "schools/:id" => "classtables#index"
+
+  #post "schools" => "schools#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

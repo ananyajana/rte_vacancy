@@ -2,8 +2,9 @@ class ClasstablesController < ApplicationController
   # GET /classtables
   # GET /classtables.json
   def index
-    @classtables = Classtable.all
-
+#    @classtable = Classtable.all
+	@school2 = School.find(params[:id])
+	 @classtables = Classtable.find(:all,:conditions => { :school_id => @school2.id })
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @classtables }
@@ -14,6 +15,7 @@ class ClasstablesController < ApplicationController
   # GET /classtables/1.json
   def show
     @classtable = Classtable.find(params[:id])
+    #@classtable = Classtable.find(:all, :conditions => { :school_id => @classtable1.id })
 
     respond_to do |format|
       format.html # show.html.erb
