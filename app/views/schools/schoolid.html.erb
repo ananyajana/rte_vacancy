@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Reg:</b>
+  <%= @school.reg_id %>
+</p>
+
+<p>
+  <b>School name:</b>
+  <%= @school.school_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @school.address %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @school.district %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @school.state %>
+</p>
+
+<p>
+  <b>Pin:</b>
+  <%= @school.pin %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @school.phone %>
+</p>
+
+<p>
+  <b>Phone2:</b>
+  <%= @school.phone2 %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @school.email_id %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%= @school.fax %>
+</p>
+
+<% if current_user %>
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<% end %>
+<%= link_to 'Back', schools_path %>

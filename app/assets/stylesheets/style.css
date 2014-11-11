@@ -45,12 +45,13 @@ body{
 	background: url(/assets/gradient.png) 0 bottom repeat-x;
 }
 .header-bg{
-	background:#FA8D03;
+	/*background:#FA8D03;*/
+	background:#0033FF
 }
 .logo h1 {
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size:4em;
-	color:#FA8D03;
+	color:#0033FF;
 }
 .header_top{
 	background:#333;
@@ -84,21 +85,21 @@ body{
 }
 .menu li a:hover, .menu li.active a {
 	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #FA9915), color-stop(100%, #D87E04));
-	background: -webkit-linear-gradient(top, #FA9915, #D87E04);
-	background: -moz-linear-gradient(top, #fa9915, #d87e04);
-	background: -o-linear-gradient(top, #fa9915, #d87e04);
-	background: linear-gradient(top, #fa9915, #d87e04);
-	background-color: #F18D05;
-	border-color: #BF7004;
+	background: -webkit-linear-gradient(top, #0066FF, #0066FF);
+	background: -moz-linear-gradient(top, #0066FF, #0066FF);
+	background: -o-linear-gradient(top, #0066FF, #0066FF);
+	background: linear-gradient(top, #0066FF, #0066FF);
+	background-color: #0066FF;
+	border-color: #0033FF;
 	color: #FFF;
 	-webkit-transition: all .9s;
 	-moz-transition: all .9s;
 	-o-transition: all .9s;
 	-ms-transition: all .9s;
 	transition: all .9s;
-	-webkit-box-shadow:rgba(90, 52, 139, 0.16) 0 1px 0, inset #E98303 0 1px 0;
-	-moz-box-shadow:rgba(90, 52, 139, 0.16) 0 1px 0, inset #E98303 0 1px 0;
-	box-shadow: rgba(90, 52, 139, 0.16) 0 1px 0, inset #E98303 0 1px 0;
+	-webkit-box-shadow:rgba(90, 52, 139, 0.16) 0 1px 0, inset #0066FF 0 1px 0;
+	-moz-box-shadow:rgba(90, 52, 139, 0.16) 0 1px 0, inset #0066FF 0 1px 0;
+	box-shadow: rgba(90, 52, 139, 0.16) 0 1px 0, inset #0066FF 0 1px 0;
 }
 .menu li:nth-child(5){
 	border-right:none;
@@ -138,10 +139,10 @@ body{
 	border: none;
 	width: 78.33%;
 	line-height: 1.5em;
-	border: 1px solid #F1E1AD;
+	border: 1px solid #0033FF;
 }
 .search input[type="submit"] {
-	background:#FFA30C url('/assets/search.png') no-repeat 11px 13px;
+	background:#0033FF url('/assets/search.png') no-repeat 11px 13px;
 	padding: 10px 20px;
 	border: none;
 	cursor: pointer;
@@ -154,7 +155,7 @@ body{
 	-o-border-radius: 0px 20px 20px 0px;
 }
 .search input[type="submit"]:hover {
-	background:#333 url('/assets/search.png') no-repeat 11px 13px;
+	background:#0033FF url('/assets/search.png') no-repeat 11px 13px;
 }
 .banner-box{
 	background:#FDF4E8;
@@ -587,7 +588,7 @@ p.link1 {
 }
 .span_2_of_3  h3,
 .span_1_of_3  h3 {
-	color: #FA8D03;
+	color: #0033FF;
 	margin-bottom: 0.5em;
 	font-size: 1.7em;
 	line-height: 1.2;
@@ -601,6 +602,26 @@ p.link1 {
 }
 .contact-form div{
 	padding:5px 0;
+}
+.contact-form table{
+	font-family: 'Montserrat Alternates', sans-serif;
+       width: 60%;
+       border-collapse: collapse;
+}
+.contact-form td, .contact-form th {
+    font-size: 0.855em;
+    border: 1px solid #0033FF;
+    padding: 8px 8px 8px 3px;
+    border-collapse: collapse;	
+}
+.contact-form th{
+	font-size: 0.955em;
+    	text-align: left;
+    	padding-top: 5px;
+   	padding-bottom: 5px;
+    	background-color: #0033FF;
+    	color: #ffffff;
+	border-collapse: collapse;
 }
 .contact-form span{
 	display:block;
@@ -632,14 +653,14 @@ p.link1 {
 	padding:7px 20px;
 	color:#FFF;
 	cursor:pointer;
-	background:#FA8D03 url(/assets/large-button-overlay.png);
+	background:#0033FF url(/assets/large-button-overlay.png);
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
 	-webkit-border-radius: 5px;
     border-radius:2px;
     font-family:Arial, Helvetica, sans-serif;
-    position:absolute;
+    position:relative;
     right:0;
 }
 .contact-form input[type="submit"]:hover{
@@ -652,7 +673,27 @@ p.link1 {
 	padding:7px 20px;
 	color:#FFF;
 	cursor:pointer;
-	background:#FA8D03 url(/assets/large-button-overlay.png);
+	background:#0033FF url(/assets/large-button-overlay.png);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
+	-webkit-border-radius: 5px;
+    border-radius:2px;
+    font-family:Arial, Helvetica, sans-serif;
+    position:absolute;
+    right:0;
+}
+.contact-form input[type="reset"]:hover{
+	background-color:#333;
+}
+.contact-form input[type="reset"]:active{
+	background-color:#333;  
+}
+.contact-form a{
+	padding:7px 20px;
+	color:#FFF;
+	cursor:pointer;
+	background:#0066FF url(/assets/large-button-overlay.png);
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
@@ -662,10 +703,10 @@ p.link1 {
     position:relative;
     right:0;
 }
-.contact-form input[type="reset"]:hover{
+.contact-form a:hover{
 	background-color:#333;
 }
-.contact-form input[type="reset"]:active{
+.contact-form a:active{
 	background-color:#333;  
 }
 .company_address p{
