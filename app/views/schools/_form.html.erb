@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <span><%= f.label :user_id %></span>
-    <span><%= f.number_field :user_id %></span>
-  </div>
-  <div class="field">
     <span><%= f.label :reg_id %></span>
     <span><%= f.text_field :reg_id %></span>
   </div>
@@ -41,11 +37,11 @@
   </div>
   <div class="field">
     <span><%= f.label :phone %></span>
-    <span><%= f.text_field :phone %></span>
+    <span><%= f.text_field :phone, :placeholder=>"Mobile No." %></span>
   </div>
   <div class="field">
     <span><%= f.label :phone2 %></span>
-    <span><%= f.text_field :phone2 %></span>
+    <span><%= f.text_field :phone2, :placeholder=>"Landline No."  %></span>
   </div>
   <div class="field">
     <span><%= f.label :email_id %></span>
@@ -54,14 +50,6 @@
   <div class="field">
     <span><%= f.label :fax %></span>
     <span><%= f.text_field :fax %></span>
-  </div>
-  <div class="field">
-    <span><%= f.label :latitude %></span>
-    <span><%= f.text_field :latitude %></span>
-  </div>
-  <div class="field">
-    <span><%= f.label :longitude %></span>
-    <span><%= f.text_field :longitude %></span>
   </div>
   <div class="actions">
     <span><%= f.submit %></span>
