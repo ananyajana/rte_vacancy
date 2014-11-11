@@ -1,0 +1,88 @@
+				
+
+<div class="header-bg">
+	<div class="wrap"> 
+			<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash_#{name}" %>
+			<% end %>
+		<div class="total-box">
+				<div class="total">
+					<div class="header_top">
+				     	<div class="menu">
+				     		<ul>				    	
+						    	<li><a href="index.html">Home</a></li>
+								<li class="active"><a href="about.html">About Us</a></li>
+						      	<li><a href="allschool.html">All Schools</a></li>
+						    	<li><a href="contact.html">Contact Us</a></li>
+						    	
+			     			
+												<% if current_user %>
+							Logged in as <%= current_user.username %>.
+							<li><%= link_to "Sign Out", signed_out_path %></li>
+							<li><%= link_to "Account Settings", account_settings_path %></li>
+							  <% if current_user.is_admin %>
+								  <li><%= link_to "Admin", admin_users_path %></li>
+							  <% end %>
+						<% else %>
+							<li><%= link_to "Sign up", new_user_path %></li> or
+							<li><%= link_to "Sign In", sign_in_path %></li>
+						<% end %>
+						<div class="clear"></div>
+						</ul>
+				     	</div>
+					
+				   
+		     			<div class="clear"></div>
+		     	</div>
+			     <div class="header-bottom">
+					 <div class="logo">
+						<h1>H.O.P.E</h1>
+						<h3>Harnessing Opportunities for Pursuing Education</h3>
+					 </div>
+					 	
+					<div class="search">
+						 <form action="/schools" method="get">
+								<input id="search" name="search" placeholder="School Name/Location" type="text" />
+								<input name="commit" type="submit" value="" />
+						   </form>
+					</div>
+					<div class="clear"></div> 
+				</div>
+			</div>	
+		</div>
+	 </div>
+</div>
+	<div class="banner-box">
+		<div class="wrap">
+			<div class="main-top">
+				<div class="main">
+			    <div class="section group about_desc">
+				<div class="col_1_of_3 grid_1_of_3">
+					<h2>Who We Are</h2>
+					<img src="/assets/group.jpg" alt=""/>				
+					<p>We are group of Dell employees wanting to the bring the RTE, right to the doorsteps of the needy and underprivileged kids. Our website helps in showing the RTE vacant seats information from class 1 to class 8 of a particular school. It is designed simple and user-friendly. There is a search option provided and any individual can search with area/PIN code/Locality. Once an area is searched, the site lists all the schools available in that area. User can choose a particular school, to get its details and RTE vacant seats. Design steps are given below.</p>
+				</div>
+				<div class="col_1_of_3 grid_1_of_3">
+					<h2>Success Stories</h2>
+				 <div class="history-desc">
+					<div class="year"><p>2014 -</p></div>
+					<p class="history">In 2014 March ,we found a cute boy Ritik, an underprivileged kid. We spent months in getting RTE information to join Ritik. Went to each and every school in our nearby locality, to find out the procedure,how to join him under RTE quota. He have the passion to study,but dint know how to approach the school. Which ever school we go ,they told us the seats were full.We joined him in regular school. Would join him under RTE in next year.We started this portal to help people like us. </p>
+				 <div class="clear"></div>
+				</div>				 
+			</div>						
+			<div class="clear"></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+		   <div class="copy-right">
+				<p>Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
+			</div>
+		</div>
+    	
+    	
+            
+
+
