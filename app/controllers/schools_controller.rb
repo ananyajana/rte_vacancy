@@ -3,7 +3,9 @@ class SchoolsController < ApplicationController
   # GET /schools.json
   def index
     @schools = School.search(params[:search])
-
+	if current_user
+		@schools = School.find(:all,:conditions => { :user_id=> current_user.id })
+	end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @schools }
