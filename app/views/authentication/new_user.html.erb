@@ -59,11 +59,7 @@
 								<div class="clear"></div>
 							</ul>
 				     	</div>
-				     	<ul class="follow_icon">
-							<li><a href="#" style="opacity: 1;"><img src="/assets/fb.png" alt=""></a></li>
-							<li><a href="#" style="opacity: 1;"><img src="/assets/tw.png" alt=""></a></li>
-							<li><a href="#" style="opacity: 1;"><img src="/assets/rss.png" alt=""></a></li>
-						</ul>
+				     	
 		     			<div class="clear"></div>
 		     	</div>
 			    <div class="header-bottom">
@@ -92,40 +88,45 @@
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
 				  	<h3>Please fill in the below details</h3>
+						<h5>
+							<% flash.each do |name, msg| %>
+							<%= content_tag :div, msg, :id => "flash_#{name}" %>
+							<% end %>
+						</h5>	
 					    <%= form_for @user, :as => :user, :url => new_user_path do |f| %>
 					    	<div>
-						    	<%= f.label 'username:' %><br/>
-								<%= f.text_field :username %>
+						    	<span><%= f.label 'username:' %></span>
+								<span><%= f.text_field :username %></span>
 								<%= show_field_error(@user, :username) %>
 						    </div>
 							<div>
-						    	<%= f.label 'email:' %><br/>
-								<%= f.text_field :email %>
+						    	<span><%= f.label 'email:' %></span>
+								<span><%= f.text_field :email %></span>
 								<%= show_field_error(@user, :email) %>
 						    </div>
 						    <div>
-						    	<%= f.label 'password:' %><br/>
-								<%= f.password_field :password %>
+						    	<span><%= f.label 'password:' %></span>
+								<span><%= f.password_field :password %></span>
 								<%= show_field_error(@user, :password) %>
 						    </div>
 							<div>
-						    	<%= f.label 'password confirmation:' %><br/>
-								<%= f.password_field :password_confirmation %>
+						    	<span><%= f.label 'password confirmation:' %></span>
+								<span><%= f.password_field :password_confirmation %></span>
 								<%= show_field_error(@user, :password_confirmation) %>
 						    </div>
 							<div>
-								<%= f.check_box :remember_me %>
-								<%= f.label 'remember me' %>
+								<span><%= f.check_box :remember_me %></span>
+								<span><%= f.label 'remember me' %></span>
 							</div>
 							<div>
-								<p>
+								<span>
 									<%= recaptcha_tags %>
-								</p>
+								</span>
+								
 							</div>
 						    <div>
-						    	<%= f.submit 'Sign Up' %>&nbsp;&nbsp;&nbsp;
-							</div>
-							<div>
+						    	<%= f.submit 'Sign Up' %>
+							
 						    	<%= f.submit 'Clear Form', :type => 'reset' %>	
 							</div>
 						<% end %>
