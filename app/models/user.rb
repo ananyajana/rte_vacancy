@@ -60,5 +60,5 @@ class User < ActiveRecord::Base
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
-  has_many :schools
+  has_many :schools, :foreign_key => 'user_id', :class_name => 'School', :dependent => :destroy
 end

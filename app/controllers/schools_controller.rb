@@ -25,9 +25,10 @@ class SchoolsController < ApplicationController
   # GET /schools/new.json
   def new
     @school = School.new
-
     respond_to do |format|
       format.html # new.html.erb
+    #@school.user_id=10
+    #@school.save
       format.json { render json: @school }
     end
   end
@@ -41,7 +42,7 @@ class SchoolsController < ApplicationController
   # POST /schools.json
   def create
     @school = School.new(params[:school])
-
+    @school.user_id=current_user.id
     respond_to do |format|
       if @school.save
         format.html { redirect_to @school, notice: 'School was successfully created.' }
@@ -51,6 +52,9 @@ class SchoolsController < ApplicationController
         format.json { render json: @school.errors, status: :unprocessable_entity }
       end
     end
+    #@school_s = School.find(@school.id)
+    #@school_s.user_id=10
+    #@school_s.save
   end
 
   # PUT /schools/1
