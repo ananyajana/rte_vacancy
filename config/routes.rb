@@ -29,6 +29,7 @@ BasicAuth::Application.routes.draw do
   get "about.html" => "home#about"
   get "index.html" => "home#index"
   get "contact.html" => "home#contact"
+  get "allschool.html" => "schools#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

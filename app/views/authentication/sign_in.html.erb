@@ -29,10 +29,10 @@
 					<div class="header_top">
 				     	<div class="menu">
 				     		<ul>
-						    	<li class="active"><a href="index.html">Home</a></li>
-						    	<li><a href="/assets/about.html.erb">About</a></li>
-						      	<li><a href="allschool.html">All School</a></li>
-						    	<li><a href="contact.html">Contact</a></li>
+						    	<li><a href="index.html">Home</a></li>
+						    	<li><a href="about.html">About Us</a></li>
+						      	<li><a href="allschool.html">All Schools</a></li>
+						    	<li><a href="contact.html">Contact Us</a></li>
 								<% if current_user %>
 									Logged in as <%= current_user.username %>.
 									<li><%= link_to "Sign Out", signed_out_path %></li>
@@ -42,7 +42,7 @@
 									  <% end %>
 								<% else %>
 									<li><%= link_to "Sign up", new_user_path %></li> or
-									<li><%= link_to "Sign In", sign_in_path %></li>
+									<li class="active"><%= link_to "Sign In", sign_in_path %></li>
 								<% end %>
 								<div class="clear"></div>
 							</ul>
