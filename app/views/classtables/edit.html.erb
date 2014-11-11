@@ -4,3 +4,54 @@
 
 <%= link_to 'Show', @classtable %> |
 <%= link_to 'Back', classtables_path %>
+
+<div class="header-bg">
+	<div class="wrap"> 
+		<div class="total-box">
+				<div class="total">
+					<div class="header_top">
+				     	<div class="menu">
+				     		<ul>
+						    	<li><a href="index.html">Home</a></li>
+						    	<li><a href="about.html">About Us</a></li>
+						      	<li><a href="allschool.html">All Schools</a></li>
+						    	<li><a href="contact.html">Contact Us</a></li>
+								
+			     			
+												<% if current_user %>
+							Logged in as <%= current_user.username %>.
+							<li><%= link_to "Sign Out", signed_out_path %></li>
+							<li ><%= link_to "Account Settings", account_settings_path %></li>
+							  <% if current_user.is_admin %>
+								  <li><%= link_to "Admin", admin_users_path %></li>
+							  <% end %>
+						<% else %>
+							<li><%= link_to "Sign up", new_user_path %></li> or
+							<li><%= link_to "Sign In", sign_in_path %></li>
+						<% end %>
+						    	<div class="clear"></div>
+			     			</ul>
+				     	</div>
+				     	<!--ul class="follow_icon">
+							<li><a href="#" style="opacity: 1;"><img src="/assets/fb.png" alt=""></a></li>
+							<li><a href="#" style="opacity: 1;"><img src="/assets/tw.png" alt=""></a></li>
+							<li><a href="#" style="opacity: 1;"><img src="/assets/rss.png" alt=""></a></li>
+						</ul-->
+		     			<div class="clear"></div>
+		     	</div>
+			     <div class="header-bottom">
+					 <div class="logo">
+						<h1>Editing school</h1>
+					 </div>
+					<div class="search">
+						 <form action="/schools" method="get">
+								<input id="search" name="search" placeholder="School Name/Location" type="text" />
+								<input name="commit" type="submit" value="" />
+						   </form>
+					</div>
+					<div class="clear"></div> 
+				</div>
+			</div>	
+		</div>
+	 </div>
+</div>

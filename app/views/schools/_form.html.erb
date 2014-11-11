@@ -12,46 +12,58 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :reg_id %><br />
-    <%= f.text_field :reg_id %>
+    <span><%= f.label :user_id %></span>
+    <span><%= f.number_field :user_id %></span>
   </div>
   <div class="field">
-    <%= f.label :school_name %><br />
-    <%= f.text_field :school_name %>
+    <span><%= f.label :reg_id %></span>
+    <span><%= f.text_field :reg_id %></span>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_area :address %>
+    <span><%= f.label :school_name %></span>
+    <span><%= f.text_field :school_name %></span>
   </div>
   <div class="field">
-    <%= f.label :district %><br />
-    <%= f.text_field :district %>
+    <span><%= f.label :address %></span>
+    <span><%= f.text_area :address %></span>
   </div>
   <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <span><%= f.label :district %></span>
+    <span><%= f.text_field :district %></span>
   </div>
   <div class="field">
-    <%= f.label :pin %><br />
-    <%= f.number_field :pin %>
+    <span><%= f.label :state %></span>
+    <span><%= f.text_field :state %></span>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone, :placeholder=>"Mobile No." %>
+    <span><%= f.label :pin %></span>
+    <span><%= f.number_field :pin %></span>
   </div>
   <div class="field">
-    <%= f.label :phone2 %><br />
-    <%= f.text_field :phone2, :placeholder=>"Landline No." %>
+    <span><%= f.label :phone %></span>
+    <span><%= f.text_field :phone %></span>
   </div>
   <div class="field">
-    <%= f.label :email_id %><br />
-    <%= f.text_field :email_id %>
+    <span><%= f.label :phone2 %></span>
+    <span><%= f.text_field :phone2 %></span>
   </div>
   <div class="field">
-    <%= f.label :fax %><br />
-    <%= f.text_field :fax %>
+    <span><%= f.label :email_id %></span>
+    <span><%= f.text_field :email_id %></span>
+  </div>
+  <div class="field">
+    <span><%= f.label :fax %></span>
+    <span><%= f.text_field :fax %></span>
+  </div>
+  <div class="field">
+    <span><%= f.label :latitude %></span>
+    <span><%= f.text_field :latitude %></span>
+  </div>
+  <div class="field">
+    <span><%= f.label :longitude %></span>
+    <span><%= f.text_field :longitude %></span>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <span><%= f.submit %></span>
   </div>
 <% end %>
