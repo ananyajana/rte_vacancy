@@ -15,6 +15,6 @@ def self.search(search)
 	find(:all)
   end
 end
- has_many :classtables 
+  has_many :classtables, :foreign_key => 'school_id', :class_name => 'Classtable', :dependent => :destroy
  belongs_to :user
   end

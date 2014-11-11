@@ -1,7 +1,7 @@
 class CreateSchools < ActiveRecord::Migration
   def change
     create_table :schools do |t|
-      t.integer :user_id, , :null => false, :references => [:users, :id]
+      t.integer :user_id, :null => false, :references => [:users, :id]
       t.string :reg_id
       t.string :school_name
       t.text :address
