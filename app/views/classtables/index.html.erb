@@ -61,7 +61,7 @@
     <th>Sc seats</th>
     <th>St seats</th>
     <th>Other seats</th>
-	<th></th>
+	<!--<th></th>-->
     <% if current_user %>
 	    <th></th>
 	    <th></th>
@@ -77,7 +77,7 @@
     <td><%= classtable.sc_seats %></td>
     <td><%= classtable.st_seats %></td>
     <td><%= classtable.other_seats %></td>
-	<td><%= link_to 'Show', classtable %></td>
+	<!--<td><%= link_to 'Show', classtable %></td>-->
     <% if current_user %>
 	    <td><%= link_to 'Edit', edit_classtable_path(classtable) %></td>
 	    <td><%= link_to 'Destroy', classtable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
