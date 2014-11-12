@@ -1,6 +1,6 @@
 BasicAuth::Application.routes.draw do
   resources :classtables
-  resources :schools, :except => [:create]
+  resources :schools, :except => [:show]
   #get 'sch', to: 'schools#new'
   root :to=>"home#index"
   get "signed_out" => "authentication#signed_out"
