@@ -43,7 +43,7 @@ class ClasstablesController < ApplicationController
   # POST /classtables.json
   def create
     @classtable = Classtable.new(params[:classtable])
-
+	#@classtable.school_id = 29
     respond_to do |format|
       if @classtable.save
         format.html { redirect_to @classtable, notice: 'Classtable was successfully created.' }

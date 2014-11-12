@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20141101111251) do
 
   create_table "classtables", :force => true do |t|
-    t.integer  "school_id"
+    t.integer  "school_id", :null => false, :references => [:schools, :id]
     t.integer  "class_no"
     t.integer  "gen_seats"
     t.integer  "obc_seats"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20141101111251) do
   end
 
   create_table "schools", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id", :null => false, :references => [:users, :id]
     t.string   "reg_id"
     t.string   "school_name"
     t.text     "address"
