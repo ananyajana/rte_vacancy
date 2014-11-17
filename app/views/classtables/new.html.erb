@@ -5,9 +5,9 @@
 					<div class="header_top">
 				     	<div class="menu">
 				     		<ul>
-						    	<li><a href="index.html">Home</a></li>
+						    	<li class="active"><a href="index.html">Home</a></li>
 						    	<li><a href="about.html">About Us</a></li>
-						      	<li><a href="allschool.html">All Schools</a></li>
+						      	<li class="active"><a href="allschool.html">All Schools</a></li>
 						    	<li><a href="contact.html">Contact Us</a></li>
 								
 			     			
@@ -34,7 +34,7 @@
 		     	</div>
 			     <div class="header-bottom">
 					 <div class="logo">
-						<h1>Editing school</h1>
+						<h1>Entering RTE info of the school</h1>
 					 </div>
 					<div class="search">
 						 <form action="/schools" method="get">
@@ -48,12 +48,34 @@
 		</div>
 	 </div>
 </div>
-<% if current_user %>
-	<h1>New classtable</h1>
-	<br />
-	<%= render 'form' %>
-<% else %>
-        <h1>Sorry, you don't have permission</h1>
-<% end %>
+<div class="banner-box">
+		<div class="wrap">
+			<div class="main-top">
+				<div class="main">
+			    <div class="section group">
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  	<% if current_user %>
+						<h3>Please enter seats available for class</h3>
+						<br />
+						<%= render 'form' %>
+					<% else %>
+							<h3>Sorry, you don't have permission</h3>
+					<% end %>
+						<div>
+							<span><%= link_to 'Back', classtables_path %></span>
+						</div>	
+				  </div>
+  				</div>
+				
+			</div>
+		</div>
+		
+				<div class="clear"></div> 
+				
+			</div>
+			</div>
+		</div>
+	 </div>   
 
-<%= link_to 'Back', classtables_path %>
+    </div>

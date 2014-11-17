@@ -1,10 +1,10 @@
-<h1>Editing classtable</h1>
+<!--<h1>Editing classtable</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @classtable %> |
 <%= link_to 'Back', classtables_path %>
-
+-->
 <div class="header-bg">
 	<div class="wrap"> 
 		<div class="total-box">
@@ -14,7 +14,7 @@
 				     		<ul>
 						    	<li><a href="index.html">Home</a></li>
 						    	<li><a href="about.html">About Us</a></li>
-						      	<li><a href="allschool.html">All Schools</a></li>
+						      	<li class="active"><a href="allschool.html">All Schools</a></li>
 						    	<li><a href="contact.html">Contact Us</a></li>
 								
 			     			
@@ -55,3 +55,33 @@
 		</div>
 	 </div>
 </div>
+<div class="banner-box">
+		<div class="wrap">
+			<div class="main-top">
+				<div class="main">
+			    <div class="section group">
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  	<h3>Edit seats availability information</h3>
+					<% if current_user %>
+					    <%= render 'form' %>
+					<% else %>
+						Sorry, you don't have permission
+					<% end %>
+						<div>
+							<span><%= link_to 'Show', @classtable %>  <%= link_to 'Back', classtables_path %></span>
+						</div>	
+				  </div>
+  				</div>
+				
+			</div>
+		</div>
+		
+				<div class="clear"></div> 
+				
+			</div>
+			</div>
+		</div>
+	 </div>   
+
+    </div>
