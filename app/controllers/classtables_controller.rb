@@ -1,9 +1,11 @@
 class ClasstablesController < ApplicationController
   # GET /classtables
   # GET /classtables.json
+  #$current_school_id=1
   def index
 #    @classtable = Classtable.all
 	@school2 = School.find(params[:id])
+	$current_school_id=@school2.id
 	 @classtables = Classtable.find(:all,:conditions => { :school_id => @school2.id })
     respond_to do |format|
       format.html # index.html.erb
@@ -43,7 +45,8 @@ class ClasstablesController < ApplicationController
   # POST /classtables.json
   def create
     @classtable = Classtable.new(params[:classtable])
-	#@classtable.school_id = 29
+	#@classtable.school_id = current_school_id
+	@classtable.school_id = $current_school_id
     respond_to do |format|
       if @classtable.save
         format.html { redirect_to @classtable, notice: 'Classtable was successfully created.' }
