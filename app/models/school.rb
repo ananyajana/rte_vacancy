@@ -10,7 +10,7 @@ class School < ActiveRecord::Base
   validates :email_id, :presence => true, :uniqueness=>true 
 def self.search(search)
   if search
-    find(:all, :conditions => ['school_name LIKE ? OR state LIKE ? OR district LIKE ? OR address LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
+    find(:all, :conditions => ['school_name LIKE ? OR state LIKE ? OR district LIKE ? OR address LIKE ? OR pin LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
   else
 	find(:all)
   end
