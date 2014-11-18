@@ -207,7 +207,9 @@
 
 							<br />
 							<div>
-								<span><%= link_to 'New School', new_school_path %></span>
+								<% if current_user %>
+									<span><%= link_to 'New School', new_school_path %></span>
+								<% end %>
 							</div>	
 						</div>	
 				  </div>
