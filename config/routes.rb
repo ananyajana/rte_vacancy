@@ -31,6 +31,14 @@ BasicAuth::Application.routes.draw do
   get "contact.html" => "home#contact"
   get "allschool.html" => "schools#index"
 
+  get "classtables/about.html" => "home#about"
+  get "classtables/:id/about.html" => "home#about"
+  get "classtables/contact.html" => "home#contact"
+  get "classtables/:id/contact.html" => "home#contact"
+  get "schools/about.html" => "home#about"
+  get "schools/:id/about.html" => "home#about"
+  get "schools/contact.html" => "home#contact"
+  get "schools/:id/contact.html" => "home#contact"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
