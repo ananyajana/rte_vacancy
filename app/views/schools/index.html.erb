@@ -54,7 +54,9 @@
 
 <table border="1">
   <tr>
-    <th>Reg</th>
+	<% if current_user %>
+		<th>Reg</th>
+	<% end %>
     <th>School name</th>
     <th>Address</th>
     <th>District</th>
@@ -73,7 +75,9 @@
 
 <% @schools.each do |school| %>
   <tr>
-    <td><%= school.reg_id %></td>
+	<% if current_user %>
+		<td><%= school.reg_id %></td>
+	<% end %>
     <td><%= school.school_name %></td>
     <td><%= school.address %></td>
     <td><%= school.district %></td>
@@ -163,7 +167,9 @@
 						<div>
 							<table border="1">
 							  <tr>
-								<th>Reg</th>
+								<% if current_user %>
+									<th>Reg</th>
+								<% end %>
 								<th>School name</th>
 								<th>Address</th>
 								<th>District</th>
@@ -184,7 +190,9 @@
 
 							<% @schools.each do |school| %>
 							  <tr>
-								<td><%= school.reg_id %></td>
+								<% if current_user %>
+									<td><%= school.reg_id %></td>
+								<% end %>
 								<td><%= school.school_name %></td>
 								<td><%= school.address %></td>
 								<td><%= school.district %></td>
