@@ -3,6 +3,11 @@ class SchoolsController < ApplicationController
   # GET /schools.json
   def index
     @schools = School.search(params[:search])
+    @schools.each do |school|
+		school.hit_today = school.hit_today + 1
+		school.save
+	end
+    @most_hit_today = School.hit_today
 	if current_user
 		@schools = School.find(:all,:conditions => { :user_id=> current_user.id })
 	end

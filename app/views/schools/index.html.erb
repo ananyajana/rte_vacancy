@@ -165,6 +165,14 @@
 				  <div class="contact-form">
 				  	<h3>Listing schools</h3>
 						<div>
+							<% if !@most_hit_today.empty? %>
+							<p>Top searched:
+								<% @most_hit_today.each do |hit_school| %>
+									<%= hit_school.school_name %> &nbsp;
+								<% end %>
+							</p>
+							<% end %>
+						<div>
 							<table border="1">
 							  <tr>
 								<% if current_user %>

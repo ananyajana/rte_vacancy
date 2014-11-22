@@ -15,6 +15,13 @@ def self.search(search)
 	find(:all)
   end
 end
+
+def self.hit_today
+    @max_hit_today = School.maximum("hit_today")
+    if (@max_hit_today!=0)
+        find(:all, :conditions => ['hit_today= ?', @max_hit_today])
+    end
+end
   has_many :classtables, :foreign_key => 'school_id', :class_name => 'Classtable', :dependent => :destroy
  belongs_to :user
   end
