@@ -1,2 +1,24 @@
+RTE WebApp " Built for Hackathon arranged by Grace Hopper Conference India'2014 "
 This is a website for finding out the number of 
 vacant seats for admission through RTE in schools.
+
+Steps to run this:
+
+
+Install turnkey rails on vmware workstation
+git clone https://github.com/ananyajana02/rte_vacancy rte
+cd rte/rte_vacancy/
+bundle install
+rake db:create
+rake db:migrate
+rails s
+// now in ur browser the webapp should run
+mysql -u root -pDell_123$
+show databases;
+use rte_development;
+select * from users;
+select * from schools;
+select * from classtables;
+
+For recaptcha
+Register ur domain(e.g. 192.168.230.128) to get the private and public keys and put them in app/initializers/recaptcha.rb
